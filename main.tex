@@ -1,0 +1,30 @@
+\documentclass[a4paper,12pt,twoside,open=right,%
+onecolumn,BCOR=10mm]{book}
+\input{header.tex}
+\writeIn{german} % Siehe header.tex. Setzt Dokumentsprache und damit Sprache von "Abstract", "Inhaltsverzeichnis", Datumsangaben etc.
+
+\begin{document}
+
+\author{a.wild.man}
+\title{Andis Kochbuch}
+\date{Jänner 2021}
+
+\pagenumbering{gobble} % Keine Seitenzahl drucken
+%\frontmatter
+\maketitle
+\tableofcontents
+%\cleardoublepage % Macht, dass openright funktioniert.
+% \chapter macht das automatisch, \tableofcontents und \printbibliography machen das nicht.
+% Falls es Probleme gibt hilft auch der Befehl \blankpage (siehe header.tex)
+\pagenumbering{arabic} \setcounter{page}{1}
+
+%\mainmatter
+\input{./rezepte/GrumbiraNudla.tex}
+\input{./rezepte/Tomatensuppe.tex}
+\input{./rezepte/Lasagne.tex}
+\input{./rezepte/*.tex}
+%\cleardoublepage
+%\pagenumbering{roman} \setcounter{page}{1}
+% bibliography, glossary and index would go here.
+
+\end{document}

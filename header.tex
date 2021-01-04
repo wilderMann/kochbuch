@@ -1,0 +1,31 @@
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[T1]{fontenc} % Wichtig für alles was mehr als ASCII verwendet
+\usepackage{csquotes} % Schöne Anführungsstriche mit \enquote{Text}
+\usepackage{amsmath} % Bessere und schönere mathematische Formeln
+\usepackage{mathtools} % Noch schönerere mathematische Formeln
+\usepackage[bottom]{footmisc} % Zwingt Fußnoten an das Ende der Seite
+\usepackage[pdftex]{hyperref} % Links richtig anzeigen. Sowohl innerhalb des Dokuments (Fußzeilen, Formeln), als auch ins Internet
+\newcommand{\writeIn}[1]{\usepackage[#1]{babel}} % Definiert einen neuen Befehl um die Sprache des Dokuments zu setzen
+\newcommand{\blankpage}{ \newpage \thispagestyle{empty} \mbox{} \newpage }
+
+%\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{scrextend}
+\usepackage{xfrac}
+
+\usepackage[a4paper,includeheadfoot,margin=2.54cm]{geometry}
+\usepackage{titlesec}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+
+%rezept makros
+\newenvironment{Zutaten}{\begin{addmargin}[0.3cm]{0cm}\begin{itemize}}{\end{itemize}\end{addmargin}}
+\newcommand{\addPicture}[1]{\begin{figure}[H]\includegraphics[width=\columnwidth]{figures/#1}\end{figure}}
+
+%\newcommand{dreiviertel}{\sfac{3}{4}}
+%\newcommand{halb}{\sfac{1}{2}}
+%\newcommand{viertel}{\sfac{1}{4}}
+%\newcommand{achtel}{\sfac{1}{8}}
